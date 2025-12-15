@@ -1,0 +1,17 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.14.4.0dev
+# options: -o C:\Users\Jovan\AppData\Local\Temp\tmpsacjq52n.oso -IC:\Program Files\Blender Foundation\Blender 4.5\4.5\scripts\addons_core\cycles\shader
+shader test
+param	float	in_float	1		%read{0,0} %write{2147483647,-1}
+param	color	in_color	1 1 1		%read{1,1} %write{2147483647,-1}
+oparam	float	out_float	0		%read{2147483647,-1} %write{0,0}
+oparam	color	out_color	0 0 0		%read{2147483647,-1} %write{1,1}
+const	float	$const1	2		%read{0,1} %write{2147483647,-1}
+code ___main___
+# C:\\Users\\Jovan\\Desktop\\University\\5.Master Courses\\Procedural_Images_(TNM084)\\TNM084 labs\\Lab 2\\test.osl:9
+#     out_color = in_color * 2.0;
+	mul		out_float in_float $const1 	%filename{"C:\\Users\\Jovan\\Desktop\\University\\5.Master Courses\\Procedural_Images_(TNM084)\\TNM084 labs\\Lab 2\\test.osl"} %line{9} %argrw{"wrr"}
+# C:\\Users\\Jovan\\Desktop\\University\\5.Master Courses\\Procedural_Images_(TNM084)\\TNM084 labs\\Lab 2\\test.osl:10
+# }
+	mul		out_color in_color $const1 	%line{10} %argrw{"wrr"}
+	end
